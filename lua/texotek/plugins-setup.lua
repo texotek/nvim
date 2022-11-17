@@ -30,9 +30,9 @@ return packer.startup(function(use)
     use("vim-scripts/ReplaceWithRegister") -- gs
 
     -- Comment gcc
-    use("numToStr/Comment.nvim")
+    use("numToStr/Comment.nvim") -- gcc 
 
-    -- File Explorere
+    -- File Explorer
     use("nvim-tree/nvim-tree.lua")
 
     -- icons
@@ -71,6 +71,7 @@ return packer.startup(function(use)
 
     -- git
     use("lewis6991/gitsigns.nvim")
+
     if packer_bootstrap then
         require("packer").sync()
     end
