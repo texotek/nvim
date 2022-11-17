@@ -1,0 +1,15 @@
+require("texotek.plugins-setup")
+
+require("texotek.core.options")
+require("texotek.core.keymaps")
+require("texotek.core.colorscheme")
+
+require("texotek.plugins.comment")
+require("texotek.plugins.nvim-autopairs")
+require("texotek.plugins.nvim-tree")
+require("texotek.plugins.lualine")
+require("texotek.plugins.telescope")
+require("texotek.plugins.nvim-cmp")
+require("texotek.plugins.lsp.mason")
+require("texotek.plugins.lsp.lspsaga")
+require("texotek.plugins.lsp.lspconfig")
