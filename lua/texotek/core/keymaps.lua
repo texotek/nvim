@@ -20,10 +20,10 @@ keymap.set("n", "<leader>tn", ":tabn<CR>") -- tabnext
 keymap.set("n", "<leader>tp", ":tabp<CR>") -- tabprevious
 
 -- Delete no Register
-keymap.set("n", "x", "\"_x")
-keymap.set("n", "d", "\"_d")
-keymap.set("n", "D", "\"_D")
-keymap.set("v", "d", "\"_d")
+keymap.set("n", "x", '"_x')
+keymap.set("n", "d", '"_d')
+keymap.set("n", "D", '"_D')
+keymap.set("v", "d", '"_d')
 keymap.set("n", "<leader>x", "x")
 keymap.set("n", "<leader>d", "d")
 keymap.set("n", "<leader>D", "D")
@@ -43,4 +43,3 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
-

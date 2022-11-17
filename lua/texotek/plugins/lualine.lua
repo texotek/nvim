@@ -5,5 +5,5 @@ end
 
 
 lualine.setup({
-    
+
 })
