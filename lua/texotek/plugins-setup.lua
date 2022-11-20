@@ -39,6 +39,8 @@ return packer.startup(function(use)
 	-- statusline
 	use("nvim-lualine/lualine.nvim")
 
+	-- moving code
+	use("matze/vim-move")
 	-- fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) --dependency
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
