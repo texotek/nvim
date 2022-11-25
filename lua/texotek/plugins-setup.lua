@@ -85,6 +85,13 @@ return packer.startup(function(use)
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
+	use({
+		"xeluxee/competitest.nvim",
+		requires = "MunifTanjim/nui.nvim",
+	})
+
+    -- syntax hightlighting
+    use("baskerville/vim-sxhkdrc")
 	if packer_bootstrap then
 		require("packer").sync()
 	end

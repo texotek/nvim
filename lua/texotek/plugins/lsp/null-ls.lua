@@ -11,8 +11,6 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 null_ls.setup({
 	sources = {
-		formatting.prettier,
-		formatting.stylua,
 	},
 	-- configure format on save
 	on_attach = function(current_client, bufnr)

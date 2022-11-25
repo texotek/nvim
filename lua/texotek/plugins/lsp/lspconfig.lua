@@ -30,38 +30,41 @@ local on_attach = function(client, bufnr)
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
-local capabilities = cmp_nvim_lsp.default_capabilities()
+local lspcapabilities = cmp_nvim_lsp.default_capabilities()
+lspcapabilities.offsetEncoding = "utf-8"
 
 -- configure html server
 lspconfig["html"].setup({
-	capabilities = capabilities,
+	capabilities = lspcapabilities,
 	on_attach = on_attach,
 })
 
 -- configure css server
 lspconfig["cssls"].setup({
-	capabilities = capabilities,
+	capabilities = lspcapabilities,
 	on_attach = on_attach,
 })
 
 lspconfig["pyright"].setup({
-	capabilities = capabilities,
+	capabilities = lspcapabilities,
 	on_attach = on_attach,
 })
 
 lspconfig["jdtls"].setup({
-	capabilities = capabilities,
+	capabilities = lspcapabilities,
 	on_attach = on_attach,
 })
 
 lspconfig["clangd"].setup({
-    capabilities = capabilities,
+    capabilities = lspcapabilities,
     on_attach = on_attach,
+
+
 })
 
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({
-	capabilities = capabilities,
+	capabilities = lspcapabilities,
 	on_attach = on_attach,
 	settings = { -- custom settings for lua
 		Lua = {
