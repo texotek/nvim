@@ -19,6 +19,9 @@ return packer.startup(function(use)
 	-- colorscheme
 	use("rakr/vim-one")
 
+    -- Terminal Windows
+    use {"akinsho/toggleterm.nvim", tag = '*'}
+
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
 	use("szw/vim-maximizer")
@@ -85,6 +88,7 @@ return packer.startup(function(use)
 	-- git
 	use("lewis6991/gitsigns.nvim")
 
+    -- Competitions
 	use({
 		"xeluxee/competitest.nvim",
 		requires = "MunifTanjim/nui.nvim",
