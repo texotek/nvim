@@ -6,6 +6,6 @@ end
 
 toggleterm.setup({
     size = 10,
-    open_mapping = [[<c-\>]],
-    direction = "float"
+    open_mapping = [[<c-.>]],
+    direction = "horizontal"
 })
