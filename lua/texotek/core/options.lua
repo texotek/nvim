@@ -39,3 +39,5 @@ opt.splitbelow = true
 -- Misc
 opt.iskeyword:append("-")
 opt.formatoptions = "cro"
+
+vim.cmd[[hi! link SignColumn LineNr]]
