@@ -16,7 +16,7 @@ end
 -- load friendly-snippets
 require("luasnip/loaders/from_vscode").lazy_load()
 
-vim.opt.completeopt = "menu,menuone,noselect"
+vim.opt.completeopt = "menu,menuone,preview,noselect"
 
 cmp.setup({
     snippet = {
@@ -46,5 +46,8 @@ cmp.setup({
             maxwidth = 50,
             ellipsis_char = "...",
         }),
+    },
+    window = {
+        documentation = cmp.config.window.bordered()
     },
 })

@@ -1,4 +1,4 @@
-local status, treesitter = pcall(require, "nvim-treesitteer.configs")
+local status, treesitter = pcall(require, "nvim-treesitter.configs")
 if not status then
 	return
 end
@@ -20,6 +20,7 @@ treesitter.setup({
 		"lua",
 		"vim",
 		"gitignore",
+        "cpp"
 	},
 	auto_install = true,
 })

@@ -29,6 +29,9 @@ keymap.set("n", "<leader>d", "d")
 keymap.set("n", "<leader>D", "D")
 keymap.set("v", "<leader>d", "d")
 
+--keymap.set("n", "o", "o<esc>")
+--keymap.set("n", "O", "O<esc>")
+
 -- plugin keymaps
 
 -- vim-maximaizer

@@ -96,6 +96,13 @@ return packer.startup(function(use)
 
     -- syntax hightlighting
     use("baskerville/vim-sxhkdrc")
+
+    use("NvChad/nvim-colorizer.lua")
+    use ({"ziontee113/color-picker.nvim",
+        config = function()
+            require("color-picker")
+        end,
+    })
 	if packer_bootstrap then
 		require("packer").sync()
 	end

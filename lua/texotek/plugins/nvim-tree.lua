@@ -10,6 +10,14 @@ vim.g.loaded_netrwPlugins = 1
 vim.cmd([[ highlight NvimTreeIndentMarker guifg=#3FC5FF ]])
 
 nvimtree.setup({
+  view = {
+    adaptive_size = true,
+    mappings = {
+      list = {
+        { key = "u", action = "dir_up" },
+      },
+    },
+  },
    actions = {
        open_file = {
            window_picker = {
