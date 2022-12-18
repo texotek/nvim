@@ -29,9 +29,6 @@ keymap.set("n", "<leader>d", "d")
 keymap.set("n", "<leader>D", "D")
 keymap.set("v", "<leader>d", "d")
 
---keymap.set("n", "o", "o<esc>")
---keymap.set("n", "O", "O<esc>")
-
 -- plugin keymaps
 
 -- vim-maximaizer
@@ -46,3 +43,11 @@ keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>")
 keymap.set("n", "<leader>fb", "<cmd>Telescope buffers<cr>")
 keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>")
+
+-- easymotions
+keymap.set("n", "<leader>j", "<Plug>(easymotion-j)")
+keymap.set("n", "<leader>k", "<Plug>(easymotion-k)")
+keymap.set("n", "<leader>w", "<Plug>(easymotion-w)")
+keymap.set("n", "<leader>W", "<Plug>(easymotion-W)")
+keymap.set("n", "s", "<Plug>(easymotion-overwin-f2)")
+keymap.set("n", "<leader>s", "<Plug>(easymotion-overwin-f)")

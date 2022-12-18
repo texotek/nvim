@@ -87,6 +87,8 @@ return packer.startup(function(use)
 	use("windwp/nvim-ts-autotag")
 
 	-- git
+    use("tpope/vim-fugitive")
+    use("tpope/vim-rhubarb")
 	use("lewis6991/gitsigns.nvim")
 
     -- Competitions
@@ -94,6 +96,9 @@ return packer.startup(function(use)
 		"xeluxee/competitest.nvim",
 		requires = "MunifTanjim/nui.nvim",
 	})
+
+    -- Easymotions
+    use("easymotion/vim-easymotion")
 
     -- syntax hightlighting
     use("baskerville/vim-sxhkdrc")
@@ -104,6 +109,8 @@ return packer.startup(function(use)
             require("color-picker")
         end,
     })
+    -- Support for plugin repeat
+    use( "tpope/vim-repeat")
 	if packer_bootstrap then
 		require("packer").sync()
 	end
