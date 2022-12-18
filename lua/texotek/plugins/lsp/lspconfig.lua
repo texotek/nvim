@@ -11,6 +11,7 @@ end
 local keymap = vim.keymap
 
 -- enable keybinds for available lsp server
+---@diagnostic disable-next-line: unused-local
 local on_attach = function(client, bufnr)
 	local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -58,10 +59,12 @@ lspconfig["jdtls"].setup({
 lspconfig["clangd"].setup({
     capabilities = lspcapabilities,
     on_attach = on_attach,
-
-
 })
 
+lspconfig["tsserver"].setup({
+    capabilities = lspcapabilities,
+    on_attach = on_attach,
+})
 -- configure lua server (with special settings)
 lspconfig["sumneko_lua"].setup({
 	capabilities = lspcapabilities,

@@ -18,6 +18,7 @@ return packer.startup(function(use)
 
 	-- colorscheme
 	use("rakr/vim-one")
+    use("dracula/vim")
 
     -- Terminal Windows
     use {"akinsho/toggleterm.nvim", tag = '*'}
@@ -40,7 +41,7 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 
 	-- statusline
-	use("nvim-lualine/lualine.nvim")
+    -- no statusline right now
 
 	-- moving code
 	use("matze/vim-move")
