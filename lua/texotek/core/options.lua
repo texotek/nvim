@@ -23,7 +23,6 @@ opt.cursorline = true
 
 -- appearance
 opt.termguicolors = true
-opt.background = "dark"
 opt.signcolumn = "yes"
 
 -- backspace
@@ -38,6 +37,6 @@ opt.splitbelow = true
 
 -- Misc
 opt.iskeyword:append("-")
-opt.formatoptions = "cro"
 
 vim.cmd[[hi! link SignColumn LineNr]]
+vim.cmd[[au FileType * setlocal formatoptions-=c formatoptions-=o]]

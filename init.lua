@@ -1,9 +1,10 @@
 require("texotek.plugins-setup")
 
-require("texotek.core.options")
-require("texotek.core.keymaps")
 require("texotek.core.colorscheme")
+require("texotek.core.keymaps")
+require("texotek.core.options")
 
+require("texotek.plugins.lualine")
 require("texotek.plugins.comment")
 require("texotek.plugins.nvim-tree")
 require("texotek.plugins.telescope")
@@ -17,3 +18,4 @@ require("texotek.plugins.gitsings")
 require("texotek.plugins.treesitter")
 require("texotek.plugins.toggleterm")
 require("texotek.plugins.color")
+require("texotek.plugins.ministarter")

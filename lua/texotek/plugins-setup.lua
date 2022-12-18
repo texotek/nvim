@@ -16,17 +16,20 @@ return packer.startup(function(use)
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
+    -- startup screen
+    use 'echasnovski/mini.nvim'
 	-- colorscheme
 	use("rakr/vim-one")
     use("dracula/vim")
+    use("Mofiqul/vscode.nvim")
 
     -- Terminal Windows
     use {"akinsho/toggleterm.nvim", tag = '*'}
 
 	-- tmux & split window navigation
 	use("christoomey/vim-tmux-navigator")
-	use("szw/vim-maximizer")
 
+    use("szw/vim-maximizer")
 	-- essential plugins
 	use("tpope/vim-surround") -- ys ds cs
 	use("vim-scripts/ReplaceWithRegister") -- gs
@@ -41,7 +44,7 @@ return packer.startup(function(use)
 	use("kyazdani42/nvim-web-devicons")
 
 	-- statusline
-    -- no statusline right now
+    use("nvim-lualine/lualine.nvim")
 
 	-- moving code
 	use("matze/vim-move")
