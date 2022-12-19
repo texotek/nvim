@@ -16,8 +16,6 @@ return packer.startup(function(use)
 	-- lua functions that many plugins use
 	use("nvim-lua/plenary.nvim")
 
-    -- startup screen
-    use 'echasnovski/mini.nvim'
 	-- colorscheme
 	use("rakr/vim-one")
     use("dracula/vim")
@@ -34,11 +32,15 @@ return packer.startup(function(use)
 	use("tpope/vim-surround") -- ys ds cs
 	use("vim-scripts/ReplaceWithRegister") -- gs
 
+    -- undo tree
+    use("mbbill/undotree")
+
 	-- Comment gcc
 	use("numToStr/Comment.nvim") -- gcc
 
 	-- File Explorer
 	use("nvim-tree/nvim-tree.lua")
+    use("ThePrimeagen/harpoon")
 
 	-- icons
 	use("kyazdani42/nvim-web-devicons")
@@ -51,6 +53,10 @@ return packer.startup(function(use)
 	-- fuzzy finding
 	use({ "nvim-telescope/telescope-fzf-native.nvim", run = "make" }) --dependency
 	use({ "nvim-telescope/telescope.nvim", branch = "0.1.x" })
+    use("cljoly/telescope-repo.nvim")
+
+    -- rooting projects for telescope
+    use("airblade/vim-rooter")
 
 	-- autocompletion
 	use("hrsh7th/nvim-cmp")
@@ -71,10 +77,14 @@ return packer.startup(function(use)
 	use("hrsh7th/cmp-nvim-lsp")
 	use({ "glepnir/lspsaga.nvim", branch = "main" })
 	use("onsails/lspkind.nvim")
+    use("SmiteshP/nvim-navic")
 
 	-- formatting & linting
 	use("jose-elias-alvarez/null-ls.nvim")
 	use("jayp0521/mason-null-ls.nvim")
+
+    -- debugging
+    use("mfussenegger/nvim-dap")
 
 	-- treesitter
 	use({
@@ -107,7 +117,7 @@ return packer.startup(function(use)
     use("baskerville/vim-sxhkdrc")
 
     use("NvChad/nvim-colorizer.lua")
-    use ({"ziontee113/color-picker.nvim",
+    use({"ziontee113/color-picker.nvim",
         config = function()
             require("color-picker")
         end,

@@ -28,6 +28,7 @@ local on_attach = function(client, bufnr)
 	keymap.set("n", "]d", "<cmd>Lspsaga diagnostic_jump_next<CR>", opts) -- jump to next diagnostic in buffer
 	keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", opts) -- show documentation for what is under cursor
 	keymap.set("n", "<leader>o", "<cmd>LSoutlineToggle<CR>", opts) -- see outline on right hand side
+
 end
 
 -- used to enable autocompletion (assign to every lsp server config)
@@ -59,6 +60,20 @@ lspconfig["jdtls"].setup({
 lspconfig["clangd"].setup({
     capabilities = lspcapabilities,
     on_attach = on_attach,
+    cmd = {
+        "clangd",
+        "--background-index",
+        "-j=12",
+        "--query-driver=/usr/bin/**/clang-*,/bin/clang,/bin/clang++,/usr/bin/gcc,/usr/bin/g++",
+        "--clang-tidy",
+        "--clang-tidy-checks=*",
+        "--all-scopes-completion",
+        "--cross-file-rename",
+        "--completion-style=detailed",
+        "--header-insertion-decorators",
+        "--header-insertion=iwyu",
+        "--pch-storage=memory",
+    }
 })
 
 lspconfig["tsserver"].setup({

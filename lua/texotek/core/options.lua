@@ -5,6 +5,8 @@ local opt = vim.opt -- for conciseness
 opt.number = true
 opt.relativenumber = true
 
+opt.scrolloff = 8
+
 -- tab & indentation
 opt.tabstop = 4
 opt.shiftwidth = 4
@@ -17,9 +19,12 @@ opt.wrap = false
 -- search settings
 opt.ignorecase = true
 opt.smartcase = true
+opt.hlsearch = false
+opt.incsearch = true
 
---cursor line
+--cursor
 opt.cursorline = true
+opt.guicursor = ''
 
 -- appearance
 opt.termguicolors = true

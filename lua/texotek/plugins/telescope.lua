@@ -20,4 +20,25 @@ telescope.setup({
     }
 })
 
+telescope.extensions = {
+    rooter = {
+        enable = true,
+        patterns = { ".git" },
+        debug = true
+    },
+    repo = {
+      list = {
+        fd_opts = {
+          "--no-ignore-vcs",
+        },
+        search_dirs = {
+          "~/tgm",
+          "~/.config",
+          "~/Developement",
+        },
+      },
+    },
+}
+
 telescope.load_extension("fzf")
+telescope.load_extension("repo")
