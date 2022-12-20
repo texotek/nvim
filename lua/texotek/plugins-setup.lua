@@ -40,13 +40,14 @@ return packer.startup(function(use)
 
 	-- File Explorer
 	use("nvim-tree/nvim-tree.lua")
-    use("ThePrimeagen/harpoon")
 
 	-- icons
 	use("kyazdani42/nvim-web-devicons")
 
 	-- statusline
     use("nvim-lualine/lualine.nvim")
+    use("romgrk/barbar.nvim")
+    use({"utilyre/barbecue.nvim", config = function () require("barbecue").setup() end})
 
 	-- moving code
 	use("matze/vim-move")
@@ -85,6 +86,7 @@ return packer.startup(function(use)
 
     -- debugging
     use("mfussenegger/nvim-dap")
+    use("mfussenegger/nvim-jdtls")
 
 	-- treesitter
 	use({
@@ -124,6 +126,12 @@ return packer.startup(function(use)
     })
     -- Support for plugin repeat
     use( "tpope/vim-repeat")
+
+    -- Which key?
+    use("folke/which-key.nvim")
+
+    -- Notification
+    use("rcarriga/nvim-notify")
 	if packer_bootstrap then
 		require("packer").sync()
 	end

@@ -24,5 +24,8 @@ nvimtree.setup({
                enable = false,
            }
        }
-   } 
+   },
+    renderer = {
+        group_empty = true,
+    }
 })

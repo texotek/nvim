@@ -1,21 +1,25 @@
-require("texotek.plugins-setup")
+require "texotek.plugins-setup"
 
-require("texotek.core.colorscheme")
-require("texotek.core.keymaps")
-require("texotek.core.options")
+require "texotek.core.colorscheme"
+require "texotek.core.keymaps"
+require "texotek.core.options"
 
-require("texotek.plugins.lualine")
-require("texotek.plugins.comment")
-require("texotek.plugins.nvim-tree")
-require("texotek.plugins.telescope")
-require("texotek.plugins.nvim-cmp")
-require("texotek.plugins.lsp.mason")
-require("texotek.plugins.lsp.lspsaga")
-require("texotek.plugins.lsp.lspconfig")
-require("texotek.plugins.lsp.null-ls")
-require("texotek.plugins.nvim-autopairs")
-require("texotek.plugins.gitsings")
-require("texotek.plugins.treesitter")
-require("texotek.plugins.toggleterm")
-require("texotek.plugins.color")
-require("texotek.plugins.harpoon")
+require "texotek.plugins.notify"
+require "texotek.plugins.lualine"
+require "texotek.plugins.comment"
+require "texotek.plugins.nvim-tree"
+require "texotek.plugins.telescope"
+require "texotek.plugins.nvim-cmp"
+require "texotek.plugins.lsp.mason"
+require "texotek.plugins.lsp.lspsaga"
+require "texotek.plugins.lsp.lspconfig"
+require "texotek.plugins.lsp.null-ls"
+require "texotek.plugins.lsp.jdtls"
+require "texotek.plugins.nvim-autopairs"
+require "texotek.plugins.gitsings"
+require "texotek.plugins.treesitter"
+require "texotek.plugins.toggleterm"
+require "texotek.plugins.color"
+require "texotek.plugins.nvim-dap"
+require "texotek.plugins.barbar"
+require "texotek.plugins.which-key"
