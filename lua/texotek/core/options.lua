@@ -43,5 +43,4 @@ opt.splitbelow = true
 -- Misc
 opt.iskeyword:append("-")
 
-vim.cmd[[hi! link SignColumn LineNr]]
 vim.cmd[[au FileType * setlocal formatoptions-=c formatoptions-=o]]
