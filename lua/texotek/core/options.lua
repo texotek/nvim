@@ -24,7 +24,7 @@ opt.incsearch = true
 
 --cursor
 opt.cursorline = true
-opt.guicursor = ''
+--opt.guicursor = ''
 
 -- appearance
 opt.termguicolors = true

@@ -13,8 +13,40 @@ end
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
 
-	-- lua functions that many plugins use
+	-- Dependencies
 	use("nvim-lua/plenary.nvim")
+    use("kyazdani42/nvim-web-devicons")
+    -- Colorscheme
+    use("tomasiser/vim-code-dark")
+    use("sainnhe/gruvbox-material")
+    use("sainnhe/everforest")
+    -- vim-tmux navigation
+    use("christoomey/vim-tmux-navigator")
+    -- statusline
+    use {'ojroques/nvim-hardline'}
+    -- fuzzy finder
+    use {'nvim-telescope/telescope.nvim'}
+    -- directory
+    use {'nvim-tree/nvim-tree.lua'}
+    -- Quality of Life
+    use {'folke/which-key.nvim'}
+    use 'karb94/neoscroll.nvim'
+    use {'gelguy/wilder.nvim'}
+
+    -- LSP
+    use "neovim/nvim-lspconfig"
+    use "williamboman/mason-lspconfig.nvim"
+    use { "williamboman/mason.nvim" }
+    -- Completion
+    use 'hrsh7th/cmp-nvim-lsp'
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-cmdline'
+    use "hrsh7th/nvim-cmp"
+    -- Snippets
+    use 'L3MON4D3/LuaSnip'
+    use 'saadparwaiz1/cmp_luasnip'
+
 
 	if packer_bootstrap then
 		require("packer").sync()
