@@ -1,10 +1,9 @@
 require "texotek.plugins-setup"
 
-require "texotek.core.colorscheme"
-require "texotek.core.keymaps"
 require "texotek.core.options"
+require "texotek.core.keymaps"
+require "texotek.core.colorscheme"
 
-require "texotek.plugins.hardline"
 require "texotek.plugins.telescope"
 require "texotek.plugins.nvim-tree"
 require "texotek.plugins.whichkey"
@@ -13,3 +12,4 @@ require "texotek.plugins.wilder"
 require "texotek.plugins.mason"
 require "texotek.plugins.lspconfig"
 require "texotek.plugins.nvim-cmp"
+require "texotek.plugins.treesitter"

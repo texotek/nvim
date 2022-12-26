@@ -1,42 +1,33 @@
 vim.g.mapleader = ","
 
 local keymap = vim.keymap -- for conciseness
+local opts = { noremap = true, silent = true }
 
 -- general keymaps
 
-keymap.set("n", "<leader>nh", ":nohl<CR>")
+keymap.set("n", "<leader>nh", ":nohl<CR>", opts)
+keymap.set("n", "<leader>sv", "<C-w>v", opts)
+keymap.set("n", "<leader>sh", "<C-w>s", opts)
 
-keymap.set("n", "<leader>sv", "<C-w>v")
-keymap.set("n", "<leader>sh", "<C-w>s")
-keymap.set("n", "<leader>se", "<C-w>=")
-keymap.set("n", "<leader>sx", ":close<CR>")
+-- resizing windows
+keymap.set("n", "<C-Up>", "<cmd>resize +2<cr>", opts)
+keymap.set("n", "<C-Down>", "<cmd>resize -2<cr>", opts)
+keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts)
+keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts)
 
-keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- Buffers
+keymap.set("n", "<A-p>", "<cmd>bprevious<cr>", opts)
+keymap.set("n", "<A-n>", "<cmd>bnext<cr>", opts)
 
--- Delete no Register
-keymap.set("n", "x", '"_x')
-keymap.set("n", "d", '"_d')
-keymap.set("n", "D", '"_D')
-keymap.set("v", "d", '"_d')
---keymap.set("n", "<leader>x", "x")
---keymap.set("n", "<leader>d", "d")
---keymap.set("n", "<leader>D", "D")
---keymap.set("v", "<leader>d", "d")
+-- Visual
+keymap.set("v", "<", "<gv", opts)
+keymap.set("v", ">", ">gv", opts)
 
 -- Telescope
-keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {})
-keymap.set('n', '<leader>fs', require('telescope.builtin').live_grep, {})
-keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {})
-keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {})
+keymap.set('n', '<leader>ff', require('telescope.builtin').find_files, {}, opts)
+keymap.set('n', '<leader>fs', require('telescope.builtin').live_grep, {}, opts)
+keymap.set('n', '<leader>fb', require('telescope.builtin').buffers, {}, opts)
+keymap.set('n', '<leader>fh', require('telescope.builtin').help_tags, {}, opts)
 
 -- Nvim-Tree
-keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>')
-
-require("which-key").register({
-  ["<leader>f"] = { name = "Telescope" },
-  ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find File" },
-  ["<leader>fs"] = { "<cmd>Telescope live_grep<cr>", "Find File" },
-  ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
-  ["<leader>fn"] = { "<cmd>enew<cr>", "New File" },
-  ["<leader>s"] = { "<leader>s", "Replace current word"},
-})
+keymap.set('n', '<leader>e', '<cmd>NvimTreeToggle<cr>', opts)

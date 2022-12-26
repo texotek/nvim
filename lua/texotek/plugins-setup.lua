@@ -20,6 +20,8 @@ return packer.startup(function(use)
     use("tomasiser/vim-code-dark")
     use("sainnhe/gruvbox-material")
     use("sainnhe/everforest")
+    use("Abstract-IDE/Abstract-cs")
+    use("savq/melange")
     -- vim-tmux navigation
     use("christoomey/vim-tmux-navigator")
     -- statusline
@@ -46,6 +48,8 @@ return packer.startup(function(use)
     -- Snippets
     use 'L3MON4D3/LuaSnip'
     use 'saadparwaiz1/cmp_luasnip'
+    -- Treesitter
+    use {'nvim-treesitter/nvim-treesitter', run = ':TSUpdate'}
 
 
 	if packer_bootstrap then

@@ -40,7 +40,8 @@ opt.clipboard:append("unnamedplus")
 opt.splitright = true
 opt.splitbelow = true
 
+-- nivm-cmp
+opt.completeopt = {"menu", "menuone", "noselect"}
 -- Misc
 opt.iskeyword:append("-")
-
-vim.cmd[[au FileType * setlocal formatoptions-=c formatoptions-=o]]
+opt.formatoptions:append("")

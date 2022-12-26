@@ -70,3 +70,12 @@ require("which-key").setup {
     filetypes = { "TelescopePrompt" },
   },
 }
+
+require("which-key").register({
+  ["<leader>f"] = { name = "Telescope" },
+  ["<leader>ff"] = { "<cmd>Telescope find_files<cr>", "Find File" },
+  ["<leader>fs"] = { "<cmd>Telescope live_grep<cr>", "Find File" },
+  ["<leader>fr"] = { "<cmd>Telescope oldfiles<cr>", "Open Recent File" },
+  ["<leader>fn"] = { "<cmd>enew<cr>", "New File" },
+  ["<leader>s"] = { "<leader>s", "Replace current word"},
+})
