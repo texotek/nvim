@@ -16,8 +16,10 @@ keymap.set("n", "<C-Left>", "<cmd>vertical resize -2<cr>", opts)
 keymap.set("n", "<C-Right>", "<cmd>vertical resize +2<cr>", opts)
 
 -- Buffers
-keymap.set("n", "<A-p>", "<cmd>bprevious<cr>", opts)
-keymap.set("n", "<A-n>", "<cmd>bnext<cr>", opts)
+keymap.set("n", "<A-,>", "<cmd>bprevious<cr>", opts)
+keymap.set("n", "<A-.>", "<cmd>bnext<cr>", opts)
+keymap.set("n", "<A-c>", "<cmd>bdelete<cr>", opts)
+keymap.set("n", "<leader>j", "<cmd>JABSOpen<cr>", opts)
 
 -- Visual
 keymap.set("v", "<", "<gv", opts)

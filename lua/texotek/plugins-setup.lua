@@ -12,7 +12,6 @@ end
 
 return packer.startup(function(use)
 	use("wbthomason/packer.nvim")
-
 	-- Dependencies
 	use("nvim-lua/plenary.nvim")
     use("kyazdani42/nvim-web-devicons")
@@ -22,8 +21,11 @@ return packer.startup(function(use)
     use("sainnhe/everforest")
     use("Abstract-IDE/Abstract-cs")
     use("savq/melange")
+    use("kaiuri/nvim-juliana")
     -- vim-tmux navigation
     use("christoomey/vim-tmux-navigator")
+    -- buffer
+    use 'matbme/JABS.nvim'
     -- statusline
     use {'ojroques/nvim-hardline'}
     -- fuzzy finder
@@ -34,6 +36,8 @@ return packer.startup(function(use)
     use {'folke/which-key.nvim'}
     use 'karb94/neoscroll.nvim'
     use {'gelguy/wilder.nvim'}
+    use {'windwp/nvim-ts-autotag'}
+    use {'windwp/nvim-autopairs'}
 
     -- LSP
     use "neovim/nvim-lspconfig"
