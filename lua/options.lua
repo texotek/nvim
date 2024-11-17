@@ -18,6 +18,8 @@ local options = {
     termguicolors = true,        -- enabl 24-bit RGB color in the TUI
     showmode = false,            -- we are experienced, wo don't need the "-- INSERT --" mode hint
     wrap = false,                -- Not wrapping text
+    signcolumn = "yes",
+    pumheight = 7,
 
     -- Searching
     incsearch = true,            -- search as characters are entered
