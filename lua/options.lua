@@ -19,11 +19,11 @@ local options = {
     showmode = false,            -- we are experienced, wo don't need the "-- INSERT --" mode hint
     wrap = false,                -- Not wrapping text
     signcolumn = "yes",
-    pumheight = 7,
+    pumheight = 6,
 
     -- Searching
     incsearch = true,            -- search as characters are entered
-    hlsearch = true,            -- do not highlight matches
+    hlsearch = true,             -- do not highlight matches
     ignorecase = true,           -- ignore case in searches by default
     smartcase = true,            -- but make it case sensitive if an uppercase is entered
 

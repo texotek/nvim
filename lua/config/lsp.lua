@@ -8,15 +8,46 @@ require('mason-lspconfig').setup({
     }
 })
 
-require 'lspconfig'.clangd.setup {}
+require("lspconfig")["clangd"].setup({})
+require("luasnip.loaders.from_vscode").lazy_load({})
+
 
 local cmp = require('cmp')
 local luasnip = require('luasnip')
+
+local cmp_kinds = {
+    Text = '  ',
+    Method = '  ',
+    Function = '  ',
+    Constructor = '  ',
+    Field = '  ',
+    Variable = '  ',
+    Class = '  ',
+    Interface = '  ',
+    Module = '  ',
+    Property = '  ',
+    Unit = '  ',
+    Value = '  ',
+    Enum = '  ',
+    Keyword = '  ',
+    Snippet = '  ',
+    Color = '  ',
+    File = '  ',
+    Reference = '  ',
+    Folder = '  ',
+    EnumMember = '  ',
+    Constant = '  ',
+    Struct = '  ',
+    Event = '  ',
+    Operator = '  ',
+    TypeParameter = '  ',
+}
 
 cmp.setup({
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
+        { name = 'nvim_lsp_signature_help' },
     },
     snippet = {
         expand = function(args)
@@ -46,6 +77,12 @@ cmp.setup({
         end, { 'i', 's' }),
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
     }),
+    formatting = {
+        format = function(_, vim_item)
+            vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. vim_item.kind
+            return vim_item
+        end,
+    }
 })
 
 vim.diagnostic.config({
@@ -54,6 +91,6 @@ vim.diagnostic.config({
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 cmp.event:on(
-  'confirm_done',
-  cmp_autopairs.on_confirm_done()
+    'confirm_done',
+    cmp_autopairs.on_confirm_done()
 )
