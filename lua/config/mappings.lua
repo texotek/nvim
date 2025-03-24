@@ -30,9 +30,6 @@ keymap('n', '<leader>fh', telescope_builtin.help_tags, { desc = 'Telescope help 
 
 keymap('t', '<esc>', [[<C-\><C-n>]])
 keymap('t', 'jk', [[<C-\><C-n>]])
-keymap('t', '<C-h>', [[<Cmd>wincmd h<CR>]])
-keymap('t', '<C-j>', [[<Cmd>wincmd j<CR>]])
-keymap('t', '<C-k>', [[<Cmd>wincmd k<CR>]])
-keymap('t', '<C-l>', [[<Cmd>wincmd l<CR>]])
-keymap('t', '<C-w>', [[<C-\><C-n><C-w>]])
 keymap({ "n", "i", "t", "x" }, '<C-e>', "<CMD>Explore<CR>")
+
+

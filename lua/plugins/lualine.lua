@@ -1,9 +1,10 @@
 return {
     'nvim-lualine/lualine.nvim',
+    enabled = false,
     opts = {
         options = {
             icons_enabled = true,
-            theme = 'ayu',
+            --theme = 'ayu',
             component_separators = { left = '', right = '' },
             section_separators = { left = '', right = '' },
             disabled_filetypes = {
