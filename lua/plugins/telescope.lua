@@ -21,6 +21,7 @@ return {
                 find_files = {
                     theme = "dropdown",
                     previewer = false,
+                    no_ignore_parent = true,
                 }
             }
         }
