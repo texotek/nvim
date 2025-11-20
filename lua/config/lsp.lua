@@ -1,3 +1,10 @@
+vim.lsp.config('kos-language-server', {
+  cmd = { "kls", "--stdio" },
+  filetypes = { "kerboscript" },
+})
+
+vim.lsp.enable('kos-language-server')
+
 require('mason').setup({})
 require('mason-lspconfig').setup({
     ensure_installed = { 'lua_ls' },
@@ -8,7 +15,6 @@ require('mason-lspconfig').setup({
     }
 })
 
-require("lspconfig")["clangd"].setup({})
 require("luasnip.loaders.from_vscode").lazy_load({})
 
 
@@ -90,10 +96,11 @@ vim.diagnostic.config({
 })
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-cmp.event:on(
-    'confirm_done',
-    cmp_autopairs.on_confirm_done()
-)
+
+-- cmp.event:on(
+--     'confirm_done',
+--     cmp_autopairs.on_confirm_done()
+-- )
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
 capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -101,3 +108,4 @@ capabilities.textDocument.completion.completionItem.snippetSupport = true
 require'lspconfig'.html.setup {
     capabilities = capabilities,
 }
+

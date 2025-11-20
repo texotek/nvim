@@ -1,5 +1,13 @@
 return {
-    "bluz71/vim-moonfly-colors",
-    "marko-cerovac/material.nvim",
-    "ishan9299/modus-theme-vim",
+    {"catppuccin/nvim", config = function ()
+        require("catppuccin").setup(
+            {
+              flavour = "auto",
+              transparent_background = true,
+              float = {
+                transparent = true,
+                solid = false,
+              },
+        })
+    end},
 }

@@ -1,9 +1,9 @@
 return {
     'nvim-lualine/lualine.nvim',
-    enabled = false,
+    enabled = true,
     opts = {
         options = {
-            icons_enabled = true,
+            icons_enabled = false,
             --theme = 'ayu',
             component_separators = { left = '', right = '' },
             section_separators = { left = '', right = '' },
@@ -22,12 +22,12 @@ return {
             }
         },
         sections = {
-            lualine_a = { 'mode' },
-            lualine_b = { 'branch', 'diff', 'diagnostics' },
+            lualine_a = { { 'mode', fmt = function(str) return str:sub(1,1) end } },
+            lualine_b = { 'diagnostics' },
             lualine_c = { 'filename' },
-            lualine_x = { 'encoding', 'fileformat', 'filetype' },
-            lualine_y = { 'progress' },
-            lualine_z = { 'location' }
+            lualine_x = { 'filetype', 'branch' },
+            lualine_y = { },
+            lualine_z = {}
         },
         inactive_sections = {
             lualine_a = {},

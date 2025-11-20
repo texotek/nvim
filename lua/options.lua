@@ -10,9 +10,9 @@ local options = {
     expandtab = true,            -- tabs are spaces, mainly because of python
 
     -- UI config
-    number = true,               -- show absolute number
-    relativenumber = true,       -- add numbers to each line on the left side
-    cursorline = true,           -- highlight cursor line underneath the cursor horizontally
+    number = false,               -- show absolute number
+    relativenumber = true,        -- add numbers to each line on the left side
+    cursorline = false,           -- highlight cursor line underneath the cursor horizontally
     splitbelow = true,           -- open new vertical split bottom
     splitright = true,           -- open new horizontal splits right
     termguicolors = true,        -- enabl 24-bit RGB color in the TUI
@@ -34,8 +34,8 @@ local options = {
     undofile = true,
 
     -- Folding
-    foldmethod = "expr",
-    foldexpr = "syntax"
+    --foldmethod = "expr",
+    --foldexpr = "syntax"
 }
 
 for key, value in pairs(options) do
