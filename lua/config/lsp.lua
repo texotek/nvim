@@ -1,26 +1,15 @@
+require('mason').setup({})
+require('mason-lspconfig').setup({ automatic_enable = true })
+
 vim.lsp.config('kos-language-server', {
   cmd = { "kls", "--stdio" },
   filetypes = { "kerboscript" },
 })
-
 vim.lsp.enable('kos-language-server')
 
-require('mason').setup({})
-require('mason-lspconfig').setup({
-    ensure_installed = { 'lua_ls' },
-    handlers = {
-        function(server_name)
-            require('lspconfig')[server_name].setup({})
-        end,
-    }
-})
-
 require("luasnip.loaders.from_vscode").lazy_load({})
-
-
 local cmp = require('cmp')
 local luasnip = require('luasnip')
-
 local cmp_kinds = {
     Text = '  ',
     Method = '  ',
@@ -53,7 +42,6 @@ cmp.setup({
     sources = {
         { name = 'nvim_lsp' },
         { name = 'luasnip' },
-        { name = 'nvim_lsp_signature_help' },
     },
     snippet = {
         expand = function(args)
@@ -88,24 +76,23 @@ cmp.setup({
             vim_item.kind = (cmp_kinds[vim_item.kind] or '') .. vim_item.kind
             return vim_item
         end,
-    }
+    },
+    sorting = {
+        comparators = {
+            cmp.config.compare.offset,
+            cmp.config.compare.exact,
+            cmp.config.compare.score,
+            require "cmp-under-comparator".under,
+            cmp.config.compare.kind,
+            cmp.config.compare.sort_text,
+            cmp.config.compare.length,
+            cmp.config.compare.order,
+        },
+    },
 })
 
-vim.diagnostic.config({
-    virtual_text = false
-})
 
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
-
--- cmp.event:on(
---     'confirm_done',
---     cmp_autopairs.on_confirm_done()
--- )
-
-local capabilities = vim.lsp.protocol.make_client_capabilities()
-capabilities.textDocument.completion.completionItem.snippetSupport = true
-
-require'lspconfig'.html.setup {
-    capabilities = capabilities,
-}
+cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done())
+vim.diagnostic.config({virtual_text = false })
 

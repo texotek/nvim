@@ -29,6 +29,7 @@ keymap('n', '<leader>fb', telescope_builtin.buffers, { desc = 'Telescope buffers
 keymap('n', '<leader>fh', telescope_builtin.help_tags, { desc = 'Telescope help tags' })
 
 keymap('t', '<esc>', [[<C-\><C-n>]])
+keymap('t', '<C- >', [[<C-\><C-n>]])
 keymap('t', 'jk', [[<C-\><C-n>]])
 keymap({ "n", "i", "t", "x" }, '<C-e>', "<CMD>Explore<CR>")
 
