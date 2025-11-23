@@ -1,3 +1,1 @@
-return {"lewis6991/satellite.nvim", opts = {
-
-}}
+return {"lewis6991/satellite.nvim"}

@@ -31,6 +31,6 @@ keymap('n', '<leader>fh', telescope_builtin.help_tags, { desc = 'Telescope help 
 keymap('t', '<esc>', [[<C-\><C-n>]])
 keymap('t', '<C- >', [[<C-\><C-n>]])
 keymap('t', 'jk', [[<C-\><C-n>]])
-keymap({ "n", "i", "t", "x" }, '<C-e>', "<CMD>Explore<CR>")
+keymap({ "n", "i", "t", "x" }, '<leader>e', "<CMD>NvimTreeToggle<CR>")
 
 
