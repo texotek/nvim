@@ -31,6 +31,10 @@ keymap('n', '<leader>fh', telescope_builtin.help_tags, { desc = 'Telescope help 
 keymap('t', '<esc>', [[<C-\><C-n>]])
 keymap('t', '<C- >', [[<C-\><C-n>]])
 keymap('t', 'jk', [[<C-\><C-n>]])
-keymap({ "n", "i", "t", "x" }, '<leader>e', "<CMD>NvimTreeToggle<CR>")
+keymap({ "n" }, '<leader>e', "<CMD>NvimTreeToggle<CR>")
 
-
+keymap("n", "<leader>du", function() require("dapui").toggle() end, {desc = "Toggle Dap UI"})
+keymap("n", "<leader>db", function() require("dap").toggle_breakpoint() end, { desc = "Debugger Breakpoint" })
+keymap("n", "<leader>dc", function() require("dap").continue() end, { desc = "Debugger Continue" })
+keymap("n", "<leader>dl", function() require("dap").run_last() end, { desc = "Debugger Last" })
+keymap("n", "<leader>dt", function() require("dap").terminate() end, { desc = "Debugger Terminate" })

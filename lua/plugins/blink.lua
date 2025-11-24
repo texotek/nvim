@@ -29,8 +29,6 @@ return {
       preset = 'super-tab',
       ['<Up>'] = { 'select_prev', 'fallback' },
       ['<Down>'] = { 'select_next', 'fallback' },
-
-      ['<CR>'] = {'select_and_accept'}
     },
 
     appearance = {

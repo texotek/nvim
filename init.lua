@@ -3,6 +3,7 @@ require("options")
 require("config.lazy")
 require("config.lsp")
 require("config.mappings")
+require("config.dap")
 
 --require("config.hover")
 
